@@ -1,6 +1,6 @@
 # HTMLd
 ##  An html "linker"
-### It looks through the provided HTML file, finds scripts and css files and imbeds them into the html file
+### The program looks through the provided HTML file, finds scripts and css files and imbeds them into the html file
 
 ## Quick start
 
