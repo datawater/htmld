@@ -21,4 +21,4 @@ make todo
 ```
 
 ## Legal stuff
-[License.md](/LICENSE)
+[License](/LICENSE)
