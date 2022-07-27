@@ -22,15 +22,3 @@ jobs:
         env:
           CC: clang
           CXX: clang++
-  build-macos:
-    runs-on: macOS-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: install dependencies
-        run: brew install sdl2 pkg-config
-      - name: build the game
-        run: |
-          make
-        env:
-          CC: clang
-          CXX: clang++
