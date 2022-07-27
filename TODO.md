@@ -1,0 +1,6 @@
+- [ ] ./src/main.c:103:			// TODO: add http(s) support
+- [ ] ./src/main.c:110:			// TODO: make this cross-platform
+- [ ] ./src/main.c:114:			// TODO: also minify the code
+- [ ] ./src/main.c:122:			// TODO: add http(s) support
+- [ ] ./src/main.c:128:			// TODO: make this cross-platform
+- [ ] ./src/main.c:132:			// TODO: also minify the code
