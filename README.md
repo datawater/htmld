@@ -1,9 +1,11 @@
 # HTMLd
 
-![LOGO](/assets/logo.png)
-
 ##  An html "linker"
 ### The program looks through the provided HTML file, finds scripts and css files and imbeds them into the html file
+
+<p align="center" width="100%">
+    <img src="/assets/logo.png">
+</p>
 
 ## Quick start
 
