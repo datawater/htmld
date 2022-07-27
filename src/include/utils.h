@@ -68,7 +68,7 @@ char* strdup(const char* s) {
 
 char* strchp(char* s, size_t n) {
     if (n > (strlen(s)+1)) { return NULL;}
-    char* tr = malloc(n+1); strncpy(tr, s, n); tr[n+1] = '\0';
+    char* tr = malloc(n+1); strncpy(tr, s, n); tr[n] = '\0';
     return tr;
 }
 

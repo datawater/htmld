@@ -17,7 +17,7 @@ htmld: src/main.c
 release-htmld: src/main.c
 	$(CC) $(CFLAGS) -o out/main -O2 -s src/main.c
 
-test: main
+test: release
 	./out/main -input ./test/index.html -output ./out/out.html
 	@echo "Checkout ./out/out.html in any browser!"
 

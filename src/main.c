@@ -46,7 +46,7 @@ char* get_path(pathType type, char* str) {
 	switch (type) {	
 		case HREF_PATH: {
 			for (int i = 0; i < (int) strlen(str)-4; ++i) {
-				char f[5]; for (int j = 0; j < 4; ++j) {f[j] = str[i+j];} f[5] = '\0';
+				char f[5]; for (int j = 0; j < 4; ++j) {f[j] = str[i+j];}
 				if (strcmp(f, "href") == 0) {
 					// Remove all of the whitespace and the `" or '`
 					i += 5; str = trim(str); str += i+1; str = trim(str); str += 1; 
@@ -63,7 +63,7 @@ char* get_path(pathType type, char* str) {
 		} break;
 		case SRC_PATH: {
 			for (int i = 0; i < (int) strlen(str)-3; ++i) {
-				char f[4]; for (int j = 0; j < 3; ++j) {f[j] = str[i+j];} f[4] = '\0';
+				char f[4]; for (int j = 0; j < 3; ++j) {f[j] = str[i+j];}
 				if (strcmp(f, "src") == 0) {
 					// Remove all of the whitespace and the `" or '`
 					i += 3; str = trim(str); str += i+1; str = trim(str); str += 1; 
