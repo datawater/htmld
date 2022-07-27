@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Wextra -Werror -std=c11
+CFLAGS = -Wall -Wextra -std=c11
 OUTPUT= out/main
 
 main:
