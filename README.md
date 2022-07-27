@@ -12,7 +12,7 @@ firefox --new-tab ./out/out.html
 
 ## Todos
 
-[TODO.md]("/TODO.md")
+[TODO.md](/TODO.md)
 
 or
 
@@ -21,4 +21,4 @@ make todo
 ```
 
 ## Legal stuff
-[License.md]("/LICENSE")
+[License.md](/LICENSE)
