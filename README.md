@@ -3,13 +3,18 @@
 ##  An html "linker"
 ### The program looks through the provided HTML file, finds scripts and css files and imbeds them into the html file
 
+- [Quickstart](/#Quickstart)
+- [Todos](/#Todos)
+- [Credits](/#Credits)
+- [Legal stuff](/#License)
+
 <p align="center" width="100%">
     <img src="/assets/logo.png">
     <br>
     <img src="https://github.com/datawater/htmld/actions/workflows/ci.yml/badge.svg">
 </p>
 
-## Quick start
+## Quickstart
 
 ```shell
 make release # for the non-release version `make`
@@ -32,5 +37,5 @@ make todo
 ### Libraries used:
 - flag.h            by tsoding [https://github.com/tsoding/flag.h](https://github.com/tsoding/flag.h)
 
-## Legal stuff
+## License
 [License](/LICENSE)
