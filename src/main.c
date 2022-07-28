@@ -120,7 +120,7 @@ void file_parse(char* input, char* output) {
 		if (strcmp(five, "<link") == 0 &&  strstr(trim(line), "stylesheet")) {
 			if (strstr(line, "http://") || strstr(line,"https://")) {
 				// TODO: add http(s) support
-				todo("Implement http/https support", __LINE__, __FILE__, 1);
+				todo("Implement http/https support, CONTINUING", __LINE__, __FILE__, 1);
 				fprintf(outputfp, "%s", line);
 				continue;
 			}
