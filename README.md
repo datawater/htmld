@@ -3,10 +3,10 @@
 ##  An html "linker"
 ### The program looks through the provided HTML file, finds scripts and css files and imbeds them into the html file
 
-- [Quickstart](/#Quickstart)
-- [Todos](/#Todos)
-- [Credits](/#Credits)
-- [Legal stuff](/#License)
+- [Quickstart](#Quickstart)
+- [Todos](#Todos)
+- [Credits](#Credits)
+- [Legal stuff](#License)
 
 <p align="center" width="100%">
     <img src="/assets/logo.png">
