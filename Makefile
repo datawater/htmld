@@ -22,4 +22,4 @@ test: release
 	@echo "Checkout ./out/out.html in any browser!"
 
 todo:
-	@grep "TODO: " -rn . --exclude="flag.h" --exclude="Makefile" --color=always
+	@grep "TODO: " -rn . --exclude="flag.h" --exclude="Makefile" --exclude="TODO.md" --color=always
