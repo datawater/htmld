@@ -85,12 +85,31 @@ char* get_path(pathType type, char* str) {
 	return NULL;
 }
 
+unsigned char* get_file_data(char* path) {
+	// TODO: make this cross-platform
+
+	int fd = open(path, O_RDONLY);
+	int len = lseek(fd, 0, SEEK_END);
+	
+	// TODO: also minify the code
+	unsigned char *data = mmap(0, len, PROT_READ, MAP_PRIVATE, fd, 0);
+
+	if (data == MAP_FAILED) {
+		char* errmsg = malloc(sizeof(char) * 64); sprintf(errmsg,"Error memory mapping a file: %s\n", strerror(errno));
+		!*PIPEDORNOT ? error(errmsg) : (void) printf(errmsg);
+		free(errmsg);
+		exit(1);
+	}	
+	return data;
+}
+
 void file_parse(char* input, char* output) {
 	FILE* inputfp = fopen(input, "r"); FILE* outputfp = fopen(output, "w");
 
 	if (inputfp == NULL || outputfp == NULL) {
 		char* errmsg = malloc(sizeof(char) * 64); sprintf(errmsg,"Error opening a file: %s\n", strerror(errno));
 		!*PIPEDORNOT ? error(errmsg) : (void) printf(errmsg);
+		free(errmsg);
 		exit(1);
 	}
 
@@ -109,12 +128,7 @@ void file_parse(char* input, char* output) {
 			char* inputdir = remove_filename(input);
 			char* path = strcat(inputdir, path_);
 
-			// TODO: make this cross-platform
-
-			int fd = open(path, O_RDONLY);
-			int len = lseek(fd, 0, SEEK_END);
-			// TODO: also minify the code
-			unsigned char *data = mmap(0, len, PROT_READ, MAP_PRIVATE, fd, 0);
+			unsigned char* data = get_file_data(path);
 
 			fprintf(outputfp, "<style>%s</style>\n", data);
 			free(path_);
@@ -129,12 +143,8 @@ void file_parse(char* input, char* output) {
 			char* path_     = get_path(SRC_PATH,trim(line));
 			char* inputdir = remove_filename(input);
 			char* path = strcat(inputdir, path_);
-			// TODO: make this cross-platform
 
-			int fd = open(path, O_RDONLY);
-			int len = lseek(fd, 0, SEEK_END);
-			// TODO: also minify the code
-			unsigned char *data = mmap(0, len, PROT_READ, MAP_PRIVATE, fd, 0);
+			unsigned char* data = get_file_data(path);
 
 			fprintf(outputfp, "<script>%s</script>\n", data);
 

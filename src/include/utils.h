@@ -26,11 +26,11 @@ char* remove_filename(char* p);
 #include "console.h"
 
 void todo(char* msg, int line, char* file, int failornot) {
-    color(FLRED);
+    color(FRED);
     printf("[TODO] ");
     color(RESET);
     printf("%s | File: %s, Line:%d\n", msg, file, line);
-    failornot ? exit(1) : (void) 0;
+    !failornot ? exit(1) : (void) 0;
 }
 
 void error(char* msg) {

@@ -27,5 +27,10 @@ or
 make todo
 ```
 
+## Credits
+
+### Libraries used:
+- flag.h            by tsoding [https://github.com/tsoding/flag.h](https://github.com/tsoding/flag.h)
+
 ## Legal stuff
 [License](/LICENSE)
